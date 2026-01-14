@@ -1,0 +1,12 @@
+[project]
+name = "turtle-learning"
+version = "0.0.1"
+license = "MIT"
+description = "A turtle learning project"
+readme = "README.md"
+requires-python = ">=3.13"
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.2",
+]
