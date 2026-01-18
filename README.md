@@ -82,4 +82,4 @@ Finished the maze? Ready for some physics?
 
 Want to draw cool shapes and spirals? Learn how to use **Loops**!
 
-👉 **Click here for the Loop Challenge Instructions**
+👉 **[Click here for the Loop Challenge Instructions](loop_challenge/Loop_README.md)**
