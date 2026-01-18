@@ -1,0 +1,1 @@
+# Init throw_challenge package
