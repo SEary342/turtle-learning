@@ -4,7 +4,7 @@ Welcome! This project is a collection of fun challenges designed to help you lea
 
 **👀 Look out for new challenges added weekly!**
 
-**[🚀 Skip Setup and Jump to Challenges](#-choose-your-challenge)**
+**[🚀 Skip Setup and Jump to Challenges](#choose-your-challenge)**
 
 ## 📥 How to Download (For Beginners)
 
@@ -45,7 +45,7 @@ If this is your first time downloading code from GitHub, don't worry! We use a m
 
 🎉 **Success!** You are now ready to start coding.
 
-## � How to Update (Get New Challenges)
+## 🔄 How to Update (Get New Challenges)
 
 If we add new levels or fix bugs, you can update your code without deleting everything!
 
@@ -55,14 +55,22 @@ If we add new levels or fix bugs, you can update your code without deleting ever
     *   **Windows**: Press `Ctrl + Shift + P`.
 3.  **Type**: `Git: Pull` and press Enter.
     *   This downloads the latest changes from GitHub to your computer.
-> **Note:** If you get an error continue to the next steps: 
-4. Go to source control and look at the files you have modified. 
-    * They will be listed under the changes. 
-5. Click back on the files and you're going to make a copy of your file so that you can pull down what's in the repository. 
-6. Copy / Paste and rename your file. 
-7. Go back to source control and click the discard changes option. 
 
-## �🚀 Choose Your Challenge
+### ⚠️ What if "Git: Pull" Fails? (Saving Your Solutions)
+
+If you get an error saying you have "local changes", it means Git doesn't want to overwrite the code you wrote. Since you cannot push to this repository, follow these steps to save your solutions and get the update:
+
+1.  **Backup Your Code**:
+    *   In the file explorer, **Copy and Paste** the file you worked on (e.g., `maze_level_1.py`).
+    *   **Rename** the copy to something like `maze_level_1_MY_SOLUTION.py`.
+2.  **Discard Changes**:
+    *   Go to the **Source Control** tab (icon looks like a branch graph).
+    *   Hover over the original file (e.g., `maze_level_1.py`) and click the **Discard Changes** arrow (↩).
+    *   *This resets the file to the original version, but your solution is safe in the copy you made!*
+3.  **Update Again**:
+    *   Run `Git: Pull` again. It should work now!
+
+## 🚀 Choose Your Challenge
 
 ---
 
