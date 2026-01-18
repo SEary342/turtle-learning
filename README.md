@@ -77,28 +77,14 @@ If you get an error saying you have "local changes", it means Git doesn't want t
 ### Challenge 1: 🐢 The Turtle Maze
 > **Goal:** Program a turtle to navigate through different maze levels without hitting the walls.
 
-1.  **How to Start**:
-    Open the file `maze_level_1.py` in VS Code. It's already set up for you:
-
-    ```python
-    from maze_challenge.maze_engine import move, player, setup_maze, screen
-
-    # Setup Level 1 (Levels 1-5 available)
-    setup_maze(level=1)
-
-    # Write your code to move the turtle!
-    move(100)
-
-    # Keep the window open
-    screen.mainloop()
-    ```
+👉 **[Click here for the Turtle Maze Instructions](turtleMaze_README.md)**
 
 ---
 
 ### Challenge 2: 🤖 Robot Ball Thrower
 > **Goal:** Use physics and variables to throw a ball into a target.
 
-👉 **[Click here for the Robot Hopper Instructions](throw_challenge/THROW_GAME_README.md)**
+👉 **[Click here for the Robot Ball Thrower Instructions](throw_challenge/ROBOT_THROWER_README.md)**
 
 ---
 
