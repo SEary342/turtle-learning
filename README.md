@@ -4,7 +4,7 @@ Welcome! This project is a collection of fun challenges designed to help you lea
 
 **👀 Look out for new challenges added weekly!**
 
-**[🚀 Skip Setup and Jump to Challenges](#choose-your-challenge)**
+**[🚀 Skip Setup and Jump to Challenges](#challenges)**
 
 ## 📥 How to Download (For Beginners)
 
@@ -70,7 +70,7 @@ If you get an error saying you have "local changes", it means Git doesn't want t
 3.  **Update Again**:
     *   Run `Git: Pull` again. It should work now!
 
-## 🚀 Choose Your Challenge
+## <a id="challenges"></a>🚀 Choose Your Challenge
 
 ---
 
