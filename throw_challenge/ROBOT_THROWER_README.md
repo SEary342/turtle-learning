@@ -1,6 +1,7 @@
-# 🤖 Robot Hopper Challenge
+# 🤖 Robot Ball Thrower Challenge
+**[⬅️ Back to Main Menu](../README.md)**
 
-Welcome to the **Robot Hopper Challenge**! 
+Welcome to the **Robot Ball Thrower Challenge**! 
 
 In this scenario, we have a robot that needs to throw a ball into a hopper (the target). Your job is to calculate the correct **angle**, **velocity** (power), or **position** to get the ball in and score!
 

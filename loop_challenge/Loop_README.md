@@ -1,4 +1,5 @@
 # 🎨 Loop Art Challenge
+**[⬅️ Back to Main Menu](../README.md)**
 
 **Goal:** Let the computer do the hard work!
 
@@ -45,3 +46,4 @@ Open `loop_art.py`. We use a `for` loop to draw cool geometric patterns.
 ### Activity 2: The Infinite Spiral (`spiral_maker.py`)
 Open `spiral_maker.py`. We use a `while` loop to keep drawing until the turtle goes off-screen.
 *   **Challenge:** Change the colors or the angle to make different spiral art!
+> **Goal:** Use loops to draw cool shapes and spirals.
