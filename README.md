@@ -4,7 +4,7 @@ Welcome! This project is a collection of fun challenges designed to help you lea
 
 **👀 Look out for new challenges added weekly!**
 
-**[🚀 Skip Setup and Jump to Challenges](#-choose-your-challenge)**
+**[🚀 Skip Setup and Jump to Challenges](#choose-your-challenge)**
 
 ## 📥 How to Download (For Beginners)
 
@@ -44,6 +44,31 @@ If this is your first time downloading code from GitHub, don't worry! We use a m
 🚧 **Heads up** You may get a popup asking to open a new workspace or add. Choose New Workspace.  
 
 🎉 **Success!** You are now ready to start coding.
+
+## 🔄 How to Update (Get New Challenges)
+
+If we add new levels or fix bugs, you can update your code without deleting everything!
+
+1.  **Open VS Code** to your `turtle-learning` project.
+2.  **Open the Command Palette**:
+    *   **Mac**: Press `Command + Shift + P`.
+    *   **Windows**: Press `Ctrl + Shift + P`.
+3.  **Type**: `Git: Pull` and press Enter.
+    *   This downloads the latest changes from GitHub to your computer.
+
+### ⚠️ What if "Git: Pull" Fails? (Saving Your Solutions)
+
+If you get an error saying you have "local changes", it means Git doesn't want to overwrite the code you wrote. Since you cannot push to this repository, follow these steps to save your solutions and get the update:
+
+1.  **Backup Your Code**:
+    *   In the file explorer, **Copy and Paste** the file you worked on (e.g., `maze_level_1.py`).
+    *   **Rename** the copy to something like `maze_level_1_MY_SOLUTION.py`.
+2.  **Discard Changes**:
+    *   Go to the **Source Control** tab (icon looks like a branch graph).
+    *   Hover over the original file (e.g., `maze_level_1.py`) and click the **Discard Changes** arrow (↩).
+    *   *This resets the file to the original version, but your solution is safe in the copy you made!*
+3.  **Update Again**:
+    *   Run `Git: Pull` again. It should work now!
 
 ## 🚀 Choose Your Challenge
 
