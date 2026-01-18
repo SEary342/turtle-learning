@@ -4,13 +4,10 @@ Welcome! This project is a collection of fun challenges designed to help you lea
 
 **👀 Look out for new challenges added weekly!**
 
-**[🚀 Skip Setup and Jump to Challenges](#challenges)**
+<details>
 
-## 📥 How to Download (For Beginners)
+<summary>📋 Prerequisites</summary>
 
-If this is your first time downloading code from GitHub, don't worry! We use a method called **"cloning"**, which simply means making a copy of the code on your own computer so you can work on it.
-
-### Prerequisites
 1.  **Git**: You need Git installed to download the code. 
     * Check if you have Git Installed:  Terminal -> New Terminal -> Type "git". 
         * If no errors it's there!
@@ -20,6 +17,13 @@ If this is your first time downloading code from GitHub, don't worry! We use a m
         * If you dont get errors, it's there!
     * [Download Python here](https://www.python.org/downloads/).
 
+</details>
+
+<details>
+
+<summary> 📥 How to Download (For Beginners) </summary>
+
+If this is your first time downloading code from GitHub, don't worry! We use a method called **"cloning"**, which simply means making a copy of the code on your own computer so you can work on it.
 ### Step-by-Step Download Guide
 
 1.  **Copy the Link**:
@@ -27,11 +31,9 @@ If this is your first time downloading code from GitHub, don't worry! We use a m
     *   Click it and copy the HTTPS URL (it looks like `https://github.com/.../turtle-learning.git`).
 
 2.  **Open VS Code**.
-
 3.  **Open the Command Palette**:
     *   **Mac**: Press `Command + Shift + P`.
     *   **Windows**: Press `Ctrl + Shift + P`.
-
 4.  **Start Cloning**:
     *   Type `Git: Clone` and press Enter.
     *   Paste the URL you copied in Step 1 and press Enter.
@@ -44,8 +46,10 @@ If this is your first time downloading code from GitHub, don't worry! We use a m
 🚧 **Heads up** You may get a popup asking to open a new workspace or add. Choose New Workspace.  
 
 🎉 **Success!** You are now ready to start coding.
+</details>
+<details>
 
-## 🔄 How to Update (Get New Challenges)
+<summary> 🔄 How to Update (Get New Challenges) </summary>
 
 If we add new levels or fix bugs, you can update your code without deleting everything!
 
@@ -70,9 +74,9 @@ If you get an error saying you have "local changes", it means Git doesn't want t
 3.  **Update Again**:
     *   Run `Git: Pull` again. It should work now!
 
-## <a id="challenges"></a>🚀 Choose Your Challenge
+</details>
 
----
+## <a id="challenges"></a>🚀 Choose Your Challenge
 
 ### Challenge 1: 🐢 The Turtle Maze
 > **Goal:** Program a turtle to navigate through different maze levels without hitting the walls.
