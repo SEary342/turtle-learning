@@ -76,4 +76,4 @@ To play with the maze, you will write Python scripts to control the turtle.
 
 Finished the maze? Ready for some physics?
 
-👉 **[Click here for the Robot Hopper Instructions](THROW_GAME_README.md)**
+👉 **[Click here for the Robot Hopper Instructions](throw_challenge/THROW_GAME_README.md)**
