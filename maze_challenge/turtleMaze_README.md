@@ -1,6 +1,6 @@
 # 🐢 The Turtle Maze Challenge
 
-**[⬅️ Back to Main Menu](README.md)**
+**[⬅️ Back to Main Menu](../README.md)**
 
 Welcome to the **Turtle Maze Challenge**!
 
@@ -15,7 +15,7 @@ In this challenge, you are the navigator. Your goal is to write code to guide a 
 ## 🚀 How to Play
 
 1.  **Open the Controller**:
-    Open the file `maze_challenge/maze_level_1.py` in VS Code.
+    Open the file `maze_level_1.py` in VS Code.
 
 2.  **Run the Code**:
     Run the file to see what the turtle does.

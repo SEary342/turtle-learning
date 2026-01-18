@@ -77,7 +77,7 @@ If you get an error saying you have "local changes", it means Git doesn't want t
 ### Challenge 1: 🐢 The Turtle Maze
 > **Goal:** Program a turtle to navigate through different maze levels without hitting the walls.
 
-👉 **[Click here for the Turtle Maze Instructions](turtleMaze_README.md)**
+👉 **[Click here for the Turtle Maze Instructions](maze_challenge/turtleMaze_README.md)**
 
 ---
 
