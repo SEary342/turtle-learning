@@ -6,7 +6,7 @@ import pytest
 sys.modules["turtle"] = MagicMock()
 
 # 2. Import the module to be tested
-from maze_challenge import maze_engine  # noqa: E402
+from maze_challenge.maze_libraries import maze_engine  # noqa: E402
 
 
 class TestMazeEngine:

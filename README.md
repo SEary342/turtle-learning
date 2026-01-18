@@ -71,3 +71,9 @@ To play with the maze, you will write Python scripts to control the turtle.
     ```bash
     pytest
     ```
+
+## 🤖 Next Challenge: Robot Hopper
+
+Finished the maze? Ready for some physics?
+
+👉 **[Click here for the Robot Hopper Instructions](THROW_GAME_README.md)**
