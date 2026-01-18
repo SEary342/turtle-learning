@@ -45,7 +45,24 @@ If this is your first time downloading code from GitHub, don't worry! We use a m
 
 🎉 **Success!** You are now ready to start coding.
 
-## 🚀 Choose Your Challenge
+## � How to Update (Get New Challenges)
+
+If we add new levels or fix bugs, you can update your code without deleting everything!
+
+1.  **Open VS Code** to your `turtle-learning` project.
+2.  **Open the Command Palette**:
+    *   **Mac**: Press `Command + Shift + P`.
+    *   **Windows**: Press `Ctrl + Shift + P`.
+3.  **Type**: `Git: Pull` and press Enter.
+    *   This downloads the latest changes from GitHub to your computer.
+> **Note:** If you get an error continue to the next steps: 
+4. Go to source control and look at the files you have modified. 
+    * They will be listed under the changes. 
+5. Click back on the files and you're going to make a copy of your file so that you can pull down what's in the repository. 
+6. Copy / Paste and rename your file. 
+7. Go back to source control and click the discard changes option. 
+
+## �🚀 Choose Your Challenge
 
 ---
 
