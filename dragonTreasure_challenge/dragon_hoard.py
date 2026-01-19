@@ -1,4 +1,3 @@
-import random
 import time
 
 
@@ -38,7 +37,7 @@ def start_level_1(student_function):
     print("Instructions: If it is 'gold', return 'keep'. Otherwise, return 'dust'.\n")
 
     score = 0
-    items = ["gold", "rock", "gold", "shoe", "gold", "bone", "gold"]
+    items = ["gold", "rock", "gem", "shoe", "gold", "bone", "gem"]
 
     for item in items:
         try:
@@ -63,16 +62,17 @@ def start_level_1(student_function):
 def start_level_2(student_function):
     print(f"\n{Colors.HEADER}--- LEVEL 2: Gems and Rubbish ---{Colors.ENDC}")
     print(
-        "Instructions: 'gold' -> 'vault', 'gem' -> 'chest', everything else -> 'incinerator'.\n"
+        "Instructions: 'gold' or 'silver' -> 'vault', 'ruby' or 'emerald' -> 'chest', everything else -> 'incinerator'.\n"
     )
 
     score = 0
     items = [
         {"type": "gold", "name": "Gold Coin"},
         {"type": "trash", "name": "Old Boot"},
-        {"type": "gem", "name": "Ruby"},
-        {"type": "gem", "name": "Emerald"},
+        {"type": "ruby", "name": "Ruby"},
+        {"type": "emerald", "name": "Emerald"},
         {"type": "trash", "name": "Fish Bone"},
+        {"type": "silver", "name": "Silver Bar"},
         {"type": "gold", "name": "Gold Bar"},
     ]
 
@@ -83,9 +83,9 @@ def start_level_2(student_function):
             print(f"{Colors.FAIL}Error in your code: {e}{Colors.ENDC}")
             return
 
-        if item["type"] == "gold":
+        if item["type"] == "gold" or item["type"] == "silver":
             correct = "vault"
-        elif item["type"] == "gem":
+        elif item["type"] == "ruby" or item["type"] == "emerald":
             correct = "chest"
         else:
             correct = "incinerator"
