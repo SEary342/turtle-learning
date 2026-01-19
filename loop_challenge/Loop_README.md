@@ -47,3 +47,12 @@ Open `loop_art.py`. We use a `for` loop to draw cool geometric patterns.
 Open `spiral_maker.py`. We use a `while` loop to keep drawing until the turtle goes off-screen.
 *   **Challenge:** Change the colors or the angle to make different spiral art!
 > **Goal:** Use loops to draw cool shapes and spirals.
+
+---
+
+## 🧠 Python Concepts
+
+*   **Loops**: Structures that repeat a block of code multiple times.
+*   **`for` loop**: Best when you know *how many times* to repeat (e.g., "draw 4 sides").
+*   **`while` loop**: Best when you want to repeat *until* something happens (e.g., "until the turtle hits the wall").
+*   **`range(x)`**: Creates a sequence of numbers from 0 up to (but not including) x.
