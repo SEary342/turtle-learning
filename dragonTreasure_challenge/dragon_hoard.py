@@ -100,7 +100,43 @@ def start_level_2(student_function):
 
 # --- LEVEL 3 LOGIC ---
 def start_level_3(student_function):
-    print(f"\n{Colors.HEADER}--- LEVEL 3: The Appraiser ---{Colors.ENDC}")
+    print(f"\n{Colors.HEADER}--- LEVEL 3: The Curse Breaker ---{Colors.ENDC}")
+    print(
+        "Instructions: If status is NOT 'cursed', return 'keep'. Otherwise, return 'banish'.\n"
+    )
+
+    score = 0
+    items = [
+        {"name": "Shiny Sword", "status": "clean"},
+        {"name": "Dark Amulet", "status": "cursed"},
+        {"name": "Gold Ring", "status": "shiny"},
+        {"name": "Evil Book", "status": "cursed"},
+        {"name": "Old Shield", "status": "dusty"},
+    ]
+
+    for item in items:
+        try:
+            decision = student_function(item["status"])
+        except Exception as e:
+            print(f"{Colors.FAIL}Error in your code: {e}{Colors.ENDC}")
+            return
+
+        if item["status"] != "cursed":
+            correct = "keep"
+        else:
+            correct = "banish"
+
+        if check_answer(f"{item['name']} ({item['status']})", decision, correct):
+            score += 1
+        print("-" * 20)
+        time.sleep(1)
+
+    print(f"Level 3 Score: {score}/{len(items)}")
+
+
+# --- LEVEL 4 LOGIC ---
+def start_level_4(student_function):
+    print(f"\n{Colors.HEADER}--- LEVEL 4: The Appraiser ---{Colors.ENDC}")
     print(
         "Instructions: Value > 100 -> 'keep'. Value <= 100 -> 'toss'. BUT if it is 'magical', always 'keep'.\n"
     )
@@ -131,4 +167,42 @@ def start_level_3(student_function):
         print("-" * 20)
         time.sleep(1)
 
-    print(f"Level 3 Score: {score}/{len(items)}")
+    print(f"Level 4 Score: {score}/{len(items)}")
+
+
+# --- LEVEL 5 LOGIC ---
+def start_level_5(student_function):
+    print(f"\n{Colors.HEADER}--- LEVEL 5: The Guard Dragon ---{Colors.ENDC}")
+    print(
+        "Instructions: 'knight' < 10 -> 'fire'. 'thief' < 5 -> 'bite'. Else -> 'watch'.\n"
+    )
+
+    score = 0
+    items = [
+        {"type": "knight", "dist": 5},
+        {"type": "knight", "dist": 20},
+        {"type": "thief", "dist": 3},
+        {"type": "thief", "dist": 10},
+        {"type": "rabbit", "dist": 2},
+    ]
+
+    for item in items:
+        try:
+            decision = student_function(item["type"], item["dist"])
+        except Exception as e:
+            print(f"{Colors.FAIL}Error in your code: {e}{Colors.ENDC}")
+            return
+
+        if item["type"] == "knight" and item["dist"] < 10:
+            correct = "fire"
+        elif item["type"] == "thief" and item["dist"] < 5:
+            correct = "bite"
+        else:
+            correct = "watch"
+
+        if check_answer(f"{item['type']} ({item['dist']}m)", decision, correct):
+            score += 1
+        print("-" * 20)
+        time.sleep(1)
+
+    print(f"Level 5 Score: {score}/{len(items)}")

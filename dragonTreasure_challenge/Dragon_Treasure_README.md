@@ -58,13 +58,46 @@ Your job is to write Python code to inspect items and make the correct decision.
         return "primary color"
     ```
 
-### Level 3: The Master Appraiser
+### Level 3: The Curse Breaker
 *   **File**: `treasureSort_level3.py`
+*   **Goal**: The Dragon wants everything, **EXCEPT** cursed items.
+*   **Logic**:
+    *   If the status is **NOT** "cursed" -> return `"keep"`
+    *   Otherwise -> return `"banish"`
+
+    **💡 Hint:** You can check if something is NOT equal using `!=`:
+    ```python
+    if weather != "rainy":
+        return "go outside"
+    ```
+
+### Level 4: The Master Appraiser
+*   **File**: `treasureSort_level4.py`
 *   **Goal**: The Dragon cares about **Value** and **Magic**.
 *   **Logic**:
     *   Keep the item if the value is **greater than 100**.
     *   **OR** keep the item if it is **magical** (even if it's cheap!).
     *   Otherwise, toss it.
+
+    **💡 Hint:** You can combine math and logic:
+    ```python
+    if score > 50 or has_bonus == True:
+        return "win"
+    ```
+
+### Level 5: The Guard Dragon
+*   **File**: `treasureSort_level5.py`
+*   **Goal**: Protect the hoard based on **Enemy Type** and **Distance**.
+*   **Logic**:
+    *   If "knight" **AND** distance < 10 -> `"fire"`
+    *   If "thief" **AND** distance < 5 -> `"bite"`
+    *   Else -> `"watch"`
+
+    **💡 Hint:** Use `and` to make sure TWO things are true at the same time:
+    ```python
+    if animal == "dog" and happiness > 10:
+        return "wag tail"
+    ```
 
 ---
 
@@ -75,3 +108,5 @@ Your job is to write Python code to inspect items and make the correct decision.
 *   **`==`**: Checks if two things are equal.
 *   **`>` / `<`**: Checks if a number is greater or smaller.
 *   **`or`**: Checks if *either* condition is true.
+*   **`and`**: Checks if *both* conditions are true.
+*   **`!=`**: Checks if two things are **NOT** equal.
