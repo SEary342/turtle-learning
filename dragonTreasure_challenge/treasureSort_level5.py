@@ -1,17 +1,16 @@
 import dragon_hoard
 
-# LEVEL 5: The Guard Dragon
-# Real coding uses numbers (like distance, health, or score) all the time!
-#
-# 1. If the intruder is a "knight" AND distance is less than 10, return "fire"
-# 2. If the intruder is a "thief" AND distance is less than 5, return "bite"
-# 3. Otherwise, return "watch"
+# LEVEL 5: The Master Appraiser
+# The Dragon only wants valuable things OR magic things.
+# 1. If the value is greater than 100, return "keep"
+# 2. OR if is_magical is True, return "keep"
+# 3. Otherwise, return "toss"
 
 
-def guard_hoard(intruder, distance):
-    # TODO: Use 'and' to check both the name and the number
+def sort_treasure(value, is_magical):
+    # TODO: Use 'or' to check both conditions
     pass
 
 
 # Run Level 5
-dragon_hoard.start_level_5(guard_hoard)
+dragon_hoard.start_level_5(sort_treasure)

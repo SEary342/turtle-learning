@@ -136,7 +136,43 @@ def start_level_3(student_function):
 
 # --- LEVEL 4 LOGIC ---
 def start_level_4(student_function):
-    print(f"\n{Colors.HEADER}--- LEVEL 4: The Appraiser ---{Colors.ENDC}")
+    print(f"\n{Colors.HEADER}--- LEVEL 4: The Quality Control ---{Colors.ENDC}")
+    print(
+        "Instructions: If is_broken is False (NOT broken), return 'keep'. Otherwise, return 'toss'.\n"
+    )
+
+    score = 0
+    items = [
+        {"name": "Perfect Diamond", "is_broken": False},
+        {"name": "Cracked Vase", "is_broken": True},
+        {"name": "Shiny Coin", "is_broken": False},
+        {"name": "Shattered Mirror", "is_broken": True},
+        {"name": "Solid Gold Bar", "is_broken": False},
+    ]
+
+    for item in items:
+        try:
+            decision = student_function(item["is_broken"])
+        except Exception as e:
+            print(f"{Colors.FAIL}Error in your code: {e}{Colors.ENDC}")
+            return
+
+        if not item["is_broken"]:
+            correct = "keep"
+        else:
+            correct = "toss"
+
+        if check_answer(f"{item['name']}", decision, correct):
+            score += 1
+        print("-" * 20)
+        time.sleep(1)
+
+    print(f"Level 4 Score: {score}/{len(items)}")
+
+
+# --- LEVEL 5 LOGIC (Was Level 4) ---
+def start_level_5(student_function):
+    print(f"\n{Colors.HEADER}--- LEVEL 5: The Appraiser ---{Colors.ENDC}")
     print(
         "Instructions: Value > 100 -> 'keep'. Value <= 100 -> 'toss'. BUT if it is 'magical', always 'keep'.\n"
     )
@@ -167,12 +203,12 @@ def start_level_4(student_function):
         print("-" * 20)
         time.sleep(1)
 
-    print(f"Level 4 Score: {score}/{len(items)}")
+    print(f"Level 5 Score: {score}/{len(items)}")
 
 
-# --- LEVEL 5 LOGIC ---
-def start_level_5(student_function):
-    print(f"\n{Colors.HEADER}--- LEVEL 5: The Guard Dragon ---{Colors.ENDC}")
+# --- LEVEL 6 LOGIC (Was Level 5) ---
+def start_level_6(student_function):
+    print(f"\n{Colors.HEADER}--- LEVEL 6: The Guard Dragon ---{Colors.ENDC}")
     print(
         "Instructions: 'knight' < 10 -> 'fire'. 'thief' < 5 -> 'bite'. Else -> 'watch'.\n"
     )
@@ -205,4 +241,4 @@ def start_level_5(student_function):
         print("-" * 20)
         time.sleep(1)
 
-    print(f"Level 5 Score: {score}/{len(items)}")
+    print(f"Level 6 Score: {score}/{len(items)}")

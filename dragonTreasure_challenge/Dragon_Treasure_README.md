@@ -71,8 +71,21 @@ Your job is to write Python code to inspect items and make the correct decision.
         return "go outside"
     ```
 
-### Level 4: The Master Appraiser
+### Level 4: The Quality Control
 *   **File**: `treasureSort_level4.py`
+*   **Goal**: Keep the good items, toss the broken ones.
+*   **Logic**:
+    *   If it is **NOT** broken -> return `"keep"`
+    *   Otherwise -> return `"toss"`
+
+    **💡 Hint:** You can use `not` to flip a True/False value:
+    ```python
+    if not is_raining:
+        return "go outside"
+    ```
+
+### Level 5: The Master Appraiser
+*   **File**: `treasureSort_level5.py`
 *   **Goal**: The Dragon cares about **Value** and **Magic**.
 *   **Logic**:
     *   Keep the item if the value is **greater than 100**.
@@ -85,8 +98,8 @@ Your job is to write Python code to inspect items and make the correct decision.
         return "win"
     ```
 
-### Level 5: The Guard Dragon
-*   **File**: `treasureSort_level5.py`
+### Level 6: The Guard Dragon
+*   **File**: `treasureSort_level6.py`
 *   **Goal**: Protect the hoard based on **Enemy Type** and **Distance**.
 *   **Logic**:
     *   If "knight" **AND** distance < 10 -> `"fire"`
@@ -109,4 +122,5 @@ Your job is to write Python code to inspect items and make the correct decision.
 *   **`>` / `<`**: Checks if a number is greater or smaller.
 *   **`or`**: Checks if *either* condition is true.
 *   **`and`**: Checks if *both* conditions are true.
+*   **`not`**: Reverses a True/False value (True becomes False).
 *   **`!=`**: Checks if two things are **NOT** equal.

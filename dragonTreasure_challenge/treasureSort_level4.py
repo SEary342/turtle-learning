@@ -1,14 +1,13 @@
 import dragon_hoard
 
-# LEVEL 4: The Master Appraiser
-# The Dragon only wants valuable things OR magic things.
-# 1. If the value is greater than 100, return "keep"
-# 2. OR if is_magical is True, return "keep"
-# 3. Otherwise, return "toss"
+# LEVEL 4: The Quality Control
+# The Dragon hates broken things!
+# 1. If is_broken is False (it is NOT broken), return "keep"
+# 2. Otherwise, return "toss"
 
 
-def sort_treasure(value, is_magical):
-    # TODO: Use 'or' to check both conditions
+def sort_treasure(is_broken):
+    # TODO: Use the 'not' keyword
     pass
 
 
