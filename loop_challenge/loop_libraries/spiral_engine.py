@@ -1,5 +1,6 @@
 import turtle
 
+
 def setup():
     # Setup the screen
     screen = turtle.Screen()
@@ -9,7 +10,7 @@ def setup():
     # Setup the turtle
     artist = turtle.Turtle()
     artist.shape("circle")
-    artist.speed(0) # Fastest speed
+    artist.speed(0)  # Fastest speed
     artist.pensize(2)
-    
+
     return artist, screen
