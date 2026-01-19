@@ -62,7 +62,18 @@ By the end of this lesson, students will be able to:
 
 ---
 
-## 💻 Activity: Level 4 - The Appraiser (15 Minutes)
+## 💻 Activity: Level 4 - The Quality Control (10 Minutes)
+
+*   **File**: `treasureSort_level4.py`
+*   **Task**: Keep the item only if it is **NOT** broken.
+*   **Key Concept**: The `not` keyword.
+*   **Teaching Moment**:
+    *   Explain that `not` flips a value. `not True` is `False`.
+    *   "If not is_broken:" reads exactly like English!
+
+---
+
+## 💻 Activity: Level 5 - The Appraiser (15 Minutes)
 
 *   **File**: `treasureSort_level4.py`
 *   **Task**: The Dragon cares about **Value** and **Magic**.
@@ -75,9 +86,9 @@ By the end of this lesson, students will be able to:
 
 ---
 
-## 💻 Activity: Level 5 - The Guard Dragon (10 Minutes)
+## 💻 Activity: Level 6 - The Guard Dragon (10 Minutes)
 
-*   **File**: `treasureSort_level5.py`
+*   **File**: `treasureSort_level6.py`
 *   **Task**: Decide to attack based on **who** it is and **how close** they are.
 *   **Key Concept**: The `and` operator + Numerical Logic.
 *   **Teaching Moment**:
