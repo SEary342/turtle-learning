@@ -71,3 +71,10 @@ To switch levels, change the number in `setup_level(1)` inside your code.
     *   **90°**: Straight up (0 distance).
     *   **0°**: Straight forward (hits the ground immediately).
 *   **Gravity**: The simulation uses standard gravity ($9.81 m/s^2$).
+
+## 🧠 Python Concepts
+
+*   **Variables**: Names used to store information (like `velocity` or `angle`). They allow us to change values easily to test different scenarios.
+*   **Assignment (`=`)**: The act of putting a value into a variable.
+*   **Iteration (Manual)**: In this challenge, *you* are acting as the loop! You change a variable, run the code, and repeat. (Later, we will use code loops to do this automatically).
+*   **Comments (`#`)**: Text written for humans to read that the computer ignores.

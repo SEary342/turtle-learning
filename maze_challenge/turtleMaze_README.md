@@ -60,3 +60,9 @@ Change the level number in `setup_maze(level=1)` to try harder mazes!
 *   `move(distance)`: Moves the turtle forward.
 *   `player.left(degrees)`: Turns the turtle to the left.
 *   `player.right(degrees)`: Turns the turtle to the right.
+
+## 🧠 Python Concepts
+
+*   **Sequencing**: The order of your code matters! The computer runs line 1, then line 2, etc.
+*   **Functions**: Commands like `move()` or `left()` are functions—mini-programs that do a specific task.
+*   **Arguments**: The numbers inside the parentheses (like `90` or `100`) tell the function *how much* to do.
