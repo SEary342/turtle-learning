@@ -1,0 +1,244 @@
+import time
+
+
+# ANSI colors for fun output
+class Colors:
+    HEADER = "\033[95m"
+    BLUE = "\033[94m"
+    GREEN = "\033[92m"
+    WARNING = "\033[93m"
+    FAIL = "\033[91m"
+    ENDC = "\033[0m"
+    BOLD = "\033[1m"
+
+
+def print_slow(text):
+    print(text)
+    time.sleep(0.5)
+
+
+def check_answer(item, student_decision, correct_decision):
+    print(f"Dragon presents: {Colors.BOLD}{item}{Colors.ENDC}")
+    print(f"You decided to: {Colors.BLUE}{student_decision}{Colors.ENDC}")
+
+    if student_decision == correct_decision:
+        print(f"{Colors.GREEN}Correct! The dragon is pleased.{Colors.ENDC}")
+        return True
+    else:
+        print(
+            f"{Colors.FAIL}Wrong! The dragon growls. (Expected: {correct_decision}){Colors.ENDC}"
+        )
+        return False
+
+
+# --- LEVEL 1 LOGIC ---
+def start_level_1(student_function):
+    print(f"{Colors.HEADER}--- LEVEL 1: The Pile of Gold ---{Colors.ENDC}")
+    print("Instructions: If it is 'gold', return 'keep'. Otherwise, return 'dust'.\n")
+
+    score = 0
+    items = ["gold", "rock", "gem", "shoe", "gold", "bone", "gem"]
+
+    for item in items:
+        try:
+            decision = student_function(item)
+        except Exception as e:
+            print(f"{Colors.FAIL}Error in your code: {e}{Colors.ENDC}")
+            return
+
+        correct = "keep" if item == "gold" else "dust"
+
+        if check_answer(item, decision, correct):
+            score += 1
+        print("-" * 20)
+        time.sleep(1)
+
+    print(f"Level 1 Score: {score}/{len(items)}")
+    if score == len(items):
+        print(f"{Colors.HEADER}PERFECT! You move to Level 2.{Colors.ENDC}")
+
+
+# --- LEVEL 2 LOGIC ---
+def start_level_2(student_function):
+    print(f"\n{Colors.HEADER}--- LEVEL 2: Gems and Rubbish ---{Colors.ENDC}")
+    print(
+        "Instructions: 'gold' or 'silver' -> 'vault', 'ruby' or 'emerald' -> 'chest', everything else -> 'incinerator'.\n"
+    )
+
+    score = 0
+    items = [
+        {"type": "gold", "name": "Gold Coin"},
+        {"type": "trash", "name": "Old Boot"},
+        {"type": "ruby", "name": "Ruby"},
+        {"type": "emerald", "name": "Emerald"},
+        {"type": "trash", "name": "Fish Bone"},
+        {"type": "silver", "name": "Silver Bar"},
+        {"type": "gold", "name": "Gold Bar"},
+    ]
+
+    for item in items:
+        try:
+            decision = student_function(item["type"])
+        except Exception as e:
+            print(f"{Colors.FAIL}Error in your code: {e}{Colors.ENDC}")
+            return
+
+        if item["type"] == "gold" or item["type"] == "silver":
+            correct = "vault"
+        elif item["type"] == "ruby" or item["type"] == "emerald":
+            correct = "chest"
+        else:
+            correct = "incinerator"
+
+        if check_answer(item["name"], decision, correct):
+            score += 1
+        print("-" * 20)
+        time.sleep(1)
+
+    print(f"Level 2 Score: {score}/{len(items)}")
+
+
+# --- LEVEL 3 LOGIC ---
+def start_level_3(student_function):
+    print(f"\n{Colors.HEADER}--- LEVEL 3: The Curse Breaker ---{Colors.ENDC}")
+    print(
+        "Instructions: If status is NOT 'cursed', return 'keep'. Otherwise, return 'banish'.\n"
+    )
+
+    score = 0
+    items = [
+        {"name": "Shiny Sword", "status": "clean"},
+        {"name": "Dark Amulet", "status": "cursed"},
+        {"name": "Gold Ring", "status": "shiny"},
+        {"name": "Evil Book", "status": "cursed"},
+        {"name": "Old Shield", "status": "dusty"},
+    ]
+
+    for item in items:
+        try:
+            decision = student_function(item["status"])
+        except Exception as e:
+            print(f"{Colors.FAIL}Error in your code: {e}{Colors.ENDC}")
+            return
+
+        if item["status"] != "cursed":
+            correct = "keep"
+        else:
+            correct = "banish"
+
+        if check_answer(f"{item['name']} ({item['status']})", decision, correct):
+            score += 1
+        print("-" * 20)
+        time.sleep(1)
+
+    print(f"Level 3 Score: {score}/{len(items)}")
+
+
+# --- LEVEL 4 LOGIC ---
+def start_level_4(student_function):
+    print(f"\n{Colors.HEADER}--- LEVEL 4: The Quality Control ---{Colors.ENDC}")
+    print(
+        "Instructions: If is_broken is False (NOT broken), return 'keep'. Otherwise, return 'toss'.\n"
+    )
+
+    score = 0
+    items = [
+        {"name": "Perfect Diamond", "is_broken": False},
+        {"name": "Cracked Vase", "is_broken": True},
+        {"name": "Shiny Coin", "is_broken": False},
+        {"name": "Shattered Mirror", "is_broken": True},
+        {"name": "Solid Gold Bar", "is_broken": False},
+    ]
+
+    for item in items:
+        try:
+            decision = student_function(item["is_broken"])
+        except Exception as e:
+            print(f"{Colors.FAIL}Error in your code: {e}{Colors.ENDC}")
+            return
+
+        if not item["is_broken"]:
+            correct = "keep"
+        else:
+            correct = "toss"
+
+        if check_answer(f"{item['name']}", decision, correct):
+            score += 1
+        print("-" * 20)
+        time.sleep(1)
+
+    print(f"Level 4 Score: {score}/{len(items)}")
+
+
+# --- LEVEL 5 LOGIC (Was Level 4) ---
+def start_level_5(student_function):
+    print(f"\n{Colors.HEADER}--- LEVEL 5: The Appraiser ---{Colors.ENDC}")
+    print(
+        "Instructions: Value > 100 -> 'keep'. Value <= 100 -> 'toss'. BUT if it is 'magical', always 'keep'.\n"
+    )
+
+    score = 0
+    items = [
+        {"name": "Rusty Sword", "value": 5, "magical": False},
+        {"name": "Diamond", "value": 500, "magical": False},
+        {"name": "Magic Bean", "value": 1, "magical": True},
+        {"name": "Golden Crown", "value": 200, "magical": False},
+        {"name": "Cursed Ring", "value": 50, "magical": True},
+    ]
+
+    for item in items:
+        try:
+            decision = student_function(item["value"], item["magical"])
+        except Exception as e:
+            print(f"{Colors.FAIL}Error in your code: {e}{Colors.ENDC}")
+            return
+
+        if item["magical"] or item["value"] > 100:
+            correct = "keep"
+        else:
+            correct = "toss"
+
+        if check_answer(item["name"], decision, correct):
+            score += 1
+        print("-" * 20)
+        time.sleep(1)
+
+    print(f"Level 5 Score: {score}/{len(items)}")
+
+
+# --- LEVEL 6 LOGIC (Was Level 5) ---
+def start_level_6(student_function):
+    print(f"\n{Colors.HEADER}--- LEVEL 6: The Guard Dragon ---{Colors.ENDC}")
+    print(
+        "Instructions: 'knight' < 10 -> 'fire'. 'thief' < 5 -> 'bite'. Else -> 'watch'.\n"
+    )
+
+    score = 0
+    items = [
+        {"type": "knight", "dist": 5},
+        {"type": "knight", "dist": 20},
+        {"type": "thief", "dist": 3},
+        {"type": "thief", "dist": 10},
+        {"type": "rabbit", "dist": 2},
+    ]
+
+    for item in items:
+        try:
+            decision = student_function(item["type"], item["dist"])
+        except Exception as e:
+            print(f"{Colors.FAIL}Error in your code: {e}{Colors.ENDC}")
+            return
+
+        if item["type"] == "knight" and item["dist"] < 10:
+            correct = "fire"
+        elif item["type"] == "thief" and item["dist"] < 5:
+            correct = "bite"
+        else:
+            correct = "watch"
+
+        if check_answer(f"{item['type']} ({item['dist']}m)", decision, correct):
+            score += 1
+        print("-" * 20)
+        time.sleep(1)
+
+    print(f"Level 6 Score: {score}/{len(items)}")

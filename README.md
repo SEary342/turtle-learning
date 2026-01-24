@@ -99,6 +99,13 @@ If you get an error saying you have "local changes", it means Git doesn't want t
 
 ---
 
+### Challenge 4: 🐉 Dragon's Treasure
+> **Goal:** Use `if` statements to sort items for a dragon.
+
+👉 **Click here for the Dragon Treasure Instructions**
+
+---
+
 ## 🛠️ Advanced Setup (Optional)
 
 If you want to run the automated tests included in the project:

@@ -6,10 +6,10 @@ setup_level(1)
 # 2. Configure your throw
 # Can you calculate the right values to hit the target?
 velocity = 20  # m/s
-angle = 45     # degrees
+angle = 45  # degrees
 
-# Advanced: Move the robot 
-robot_position = 0 # meters from start
+# Advanced: Move the robot
+robot_position = 0  # meters from start
 
 # 3. Fire!
 throw_ball(velocity, angle, robot_x=robot_position)
