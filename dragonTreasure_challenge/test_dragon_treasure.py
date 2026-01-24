@@ -2,6 +2,7 @@ import unittest
 from unittest.mock import patch
 import dragon_hoard
 
+
 class TestDragonTreasure(unittest.TestCase):
     """
     Unit tests to verify the logic of the Dragon Treasure game engine.
@@ -11,8 +12,8 @@ class TestDragonTreasure(unittest.TestCase):
 
     def setUp(self):
         # Patch print and sleep to keep test output clean and fast
-        self.patcher_print = patch('builtins.print')
-        self.patcher_sleep = patch('dragon_hoard.time.sleep')
+        self.patcher_print = patch("builtins.print")
+        self.patcher_sleep = patch("dragon_hoard.time.sleep")
         self.mock_print = self.patcher_print.start()
         self.mock_sleep = self.patcher_sleep.start()
 
@@ -25,16 +26,16 @@ class TestDragonTreasure(unittest.TestCase):
         Helper to run a level with a student solution and verify correctness.
         We mock check_answer to ensure every decision matches the expected outcome.
         """
-        with patch('dragon_hoard.check_answer') as mock_check:
+        with patch("dragon_hoard.check_answer") as mock_check:
             # side_effect to return True if student matches correct, mimicking game logic
             mock_check.side_effect = lambda item, student, correct: student == correct
-            
+
             # Run the level
             level_function(student_solution)
-            
+
             # Verify check_answer was called at least once
             self.assertTrue(mock_check.called, "Game engine did not process any items.")
-            
+
             # Verify every call was correct
             for call in mock_check.call_args_list:
                 args = call.args
@@ -42,11 +43,11 @@ class TestDragonTreasure(unittest.TestCase):
                 item_display = args[0]
                 student_decision = args[1]
                 correct_decision = args[2]
-                
+
                 self.assertEqual(
-                    student_decision, 
-                    correct_decision, 
-                    f"Failed for item '{item_display}'. Student: '{student_decision}', Expected: '{correct_decision}'"
+                    student_decision,
+                    correct_decision,
+                    f"Failed for item '{item_display}'. Student: '{student_decision}', Expected: '{correct_decision}'",
                 )
 
     def test_level_1_logic(self):
@@ -55,7 +56,7 @@ class TestDragonTreasure(unittest.TestCase):
             if item == "gold":
                 return "keep"
             return "dust"
-        
+
         self.run_level_and_verify(dragon_hoard.start_level_1, solution)
 
     def test_level_2_logic(self):
@@ -67,7 +68,7 @@ class TestDragonTreasure(unittest.TestCase):
                 return "chest"
             else:
                 return "incinerator"
-                
+
         self.run_level_and_verify(dragon_hoard.start_level_2, solution)
 
     def test_level_3_logic(self):
@@ -76,7 +77,7 @@ class TestDragonTreasure(unittest.TestCase):
             if status != "cursed":
                 return "keep"
             return "banish"
-            
+
         self.run_level_and_verify(dragon_hoard.start_level_3, solution)
 
     def test_level_4_logic(self):
@@ -85,7 +86,7 @@ class TestDragonTreasure(unittest.TestCase):
             if not is_broken:
                 return "keep"
             return "toss"
-            
+
         self.run_level_and_verify(dragon_hoard.start_level_4, solution)
 
     def test_level_5_logic(self):
@@ -94,7 +95,7 @@ class TestDragonTreasure(unittest.TestCase):
             if value > 100 or is_magical:
                 return "keep"
             return "toss"
-            
+
         self.run_level_and_verify(dragon_hoard.start_level_5, solution)
 
     def test_level_6_logic(self):
@@ -105,8 +106,9 @@ class TestDragonTreasure(unittest.TestCase):
             elif intruder == "thief" and distance < 5:
                 return "bite"
             return "watch"
-            
+
         self.run_level_and_verify(dragon_hoard.start_level_6, solution)
 
-if __name__ == '__main__':
+
+if __name__ == "__main__":
     unittest.main()
