@@ -102,7 +102,7 @@ If you get an error saying you have "local changes", it means Git doesn't want t
 ### Challenge 4: 🐉 Dragon's Treasure
 > **Goal:** Use `if` statements to sort items for a dragon.
 
-👉 **Click here for the Dragon Treasure Instructions**
+👉 **[Click here for the Dragon Treasure Instructions](dragonTreasure_challenge/Dragon_Treasure_README.md)**
 
 ---
 
