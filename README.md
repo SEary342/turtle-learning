@@ -99,6 +99,13 @@ If you get an error saying you have "local changes", it means Git doesn't want t
 
 ---
 
+### Challenge 4: 📚 Lists Challenge
+> **Goal:** Learn how to create, access, and manipulate lists - one of Python's most powerful data structures.
+
+👉 **[Click here for the Lists Challenge Instructions](list_challenge/LIST_README.md)**
+
+---
+
 ### Challenge 4: 🐉 Dragon's Treasure
 > **Goal:** Use `if` statements to sort items for a dragon.
 
