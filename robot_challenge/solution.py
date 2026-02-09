@@ -47,7 +47,7 @@ def shooter_dict_lookup(current_dist) -> int:
     rounded_dist = round(current_dist)
     if rounded_dist in shooter_dict:
         return shooter_dict[rounded_dist]
-    return None  # Return None to let calculate_rpm try another method
+    return 0  # Return None to let calculate_rpm try another method
 
 
 def shooter_calculation(current_dist) -> int:
