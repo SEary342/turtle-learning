@@ -164,11 +164,16 @@ def right_rev():
 
 def shoot():
     global has_ball
+    dist = robot.distance(goal)
+    rpm = calculate_rpm(dist)
+
     if has_ball:
-        # Move ball from robot to goal
-        ball.goto(goal.pos())
-        print(f">>> SHOT FIRED AT {calculate_rpm(robot.distance(goal))} RPM! <<<")
-        has_ball = False
+        if rpm > 0:
+            ball.goto(goal.pos())
+            print(f">>> SHOT FIRED AT {rpm} RPM! <<<")
+            has_ball = False
+        else:
+            print("Error: RPM not set! Cannot shoot.")
     else:
         print("Error: No ball in intake!")
 
